@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         binding.btnReceiveService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MyService.class);
-                bindService(intent, conn, Context.BIND_AUTO_CREATE);
                 int num = ms.getRan();
                 binding.textView.setText(num + "");
             }
