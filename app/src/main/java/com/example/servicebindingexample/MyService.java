@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -28,6 +29,7 @@ public class MyService extends Service {
 
     @Override
     public void onCreate() {
+        Toast.makeText(getApplicationContext(), "서비스 실행됨", Toast.LENGTH_SHORT).show();
         super.onCreate();
     }
 
@@ -38,6 +40,7 @@ public class MyService extends Service {
 
     @Override
     public void onDestroy() {
+        Toast.makeText(getApplicationContext(),"서비스 종료됨", Toast.LENGTH_SHORT).show();
         super.onDestroy();
     }
 }
